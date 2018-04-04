@@ -6,10 +6,15 @@ Tested on elmulators Nexus 5X API 25 and 27
 
 ## Environment setup:
 Ubuntu 16.04 LTS
+
 IntelliJ IDEA Community 2018.1
+
 Android Studio 3.1
+
 Java 1.8.0_161
+
 Maven 3.3.9
+
 Appium 1.7.1
 
 ### Steps to run app and tests:
