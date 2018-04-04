@@ -112,6 +112,8 @@ public class SampleMobileAutomationTest extends BaseAppiumTest {
 
     @After
     public void tearDown(){
+
         androidDriver.quit();
+
     }
 }

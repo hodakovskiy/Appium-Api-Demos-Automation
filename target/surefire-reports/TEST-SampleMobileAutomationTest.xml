@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SampleMobileAutomationTest" time="88.518" tests="3" errors="0" skipped="0" failures="0">
+<testsuite name="SampleMobileAutomationTest" time="89.109" tests="3" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="9.0.4+11"/>
@@ -58,7 +58,45 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="clickLinkInWebView2Test" classname="SampleMobileAutomationTest" time="30.895"/>
-  <testcase name="dateWidgetsSwipeTest" classname="SampleMobileAutomationTest" time="33.414"/>
-  <testcase name="dragAndDropElementTest" classname="SampleMobileAutomationTest" time="24.209"/>
+  <testcase name="clickLinkInWebView2Test" classname="SampleMobileAutomationTest" time="42.094">
+    <error message="An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 0 milliseconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.9.1&apos;, revision: &apos;63f7b50&apos;, time: &apos;2018-02-07T22:25:02.294Z&apos;&#10;System info: host: &apos;mariusz-ThinkPad-T510&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.13.0-38-generic&apos;, java.version: &apos;9.0.4&apos;&#10;Driver info: io.appium.java_client.android.AndroidDriver&#10;Capabilities {app: /home/mariusz/IdeaProjects/..., appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, appWaitActivity: io.appium.android.apis.ApiD..., appWaitPackage: io.appium.android.apis, databaseEnabled: false, desired: {app: /home/mariusz/IdeaProjects/..., deviceName: Nexus_5_API_25, platformName: Android}, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 7.1.1, takesScreenshot: true, warnings: {}, webStorageEnabled: false}&#10;Session ID: 452ebc80-6bdc-467c-9850-5d75a1bc34c4&#10;*** Element info: {Using=xpath, value=//android.widget.TextView[@text=&apos;WebView2&apos;]}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.9.1', revision: '63f7b50', time: '2018-02-07T22:25:02.294Z'
+System info: host: 'mariusz-ThinkPad-T510', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-38-generic', java.version: '9.0.4'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: /home/mariusz/IdeaProjects/..., appActivity: io.appium.android.apis.ApiD..., appPackage: io.appium.android.apis, appWaitActivity: io.appium.android.apis.ApiD..., appWaitPackage: io.appium.android.apis, databaseEnabled: false, desired: {app: /home/mariusz/IdeaProjects/..., deviceName: Nexus_5_API_25, platformName: Android}, deviceManufacturer: Google, deviceModel: Android SDK built for x86, deviceName: emulator-5554, deviceScreenSize: 1080x1920, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, platform: LINUX, platformName: LINUX, platformVersion: 7.1.1, takesScreenshot: true, warnings: {}, webStorageEnabled: false}
+Session ID: 452ebc80-6bdc-467c-9850-5d75a1bc34c4
+*** Element info: {Using=xpath, value=//android.widget.TextView[@text='WebView2']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:89)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:371)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at SampleMobileAutomationTest.clickLinkInWebView2Test(SampleMobileAutomationTest.java:37)
+</error>
+    <system-err><![CDATA[Apr 04, 2018 3:59:37 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: OSS
+]]></system-err>
+  </testcase>
+  <testcase name="dateWidgetsSwipeTest" classname="SampleMobileAutomationTest" time="30.225"/>
+  <testcase name="dragAndDropElementTest" classname="SampleMobileAutomationTest" time="16.79"/>
 </testsuite>
