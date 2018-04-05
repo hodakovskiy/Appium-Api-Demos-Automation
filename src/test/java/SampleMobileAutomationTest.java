@@ -15,7 +15,7 @@ public class SampleMobileAutomationTest extends BaseAppiumTest {
 
     @Before
     public void setUp() throws MalformedURLException {
-        androidDriver = appiumCapabilities();
+        androidDriver = appiumCapabilitiesForApplication();
         androidDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
@@ -25,7 +25,10 @@ public class SampleMobileAutomationTest extends BaseAppiumTest {
         String viewsByXpath = "//android.widget.TextView[@text='Views']";
         String webView2ByXpath = "//android.widget.TextView[@text='WebView2']";
         String linkById = "i am a link";
-        String textContentByXpath = "//android.view.View[@content-desc='I am some other page content']";
+        String textContentByXpath = "//android.view.View[@text='I am some other page content']";
+
+        androidDriver.findElementsByAndroidUIAutomator(
+                "new UiScrollable(new UiSelector()).scrollIntoView(text(\"Views\"));");
 
         AndroidElement viewsButton = androidDriver.findElementByXPath(viewsByXpath);
         viewsButton.click();
@@ -52,6 +55,9 @@ public class SampleMobileAutomationTest extends BaseAppiumTest {
         String dragDotDraggableById = "io.appium.android.apis:id/drag_dot_1";
         String dotToDropFirstById = "io.appium.android.apis:id/drag_dot_2";
 
+        androidDriver.findElementsByAndroidUIAutomator(
+                "new UiScrollable(new UiSelector()).scrollIntoView(text(\"Views\"));");
+
         AndroidElement viewsButton = androidDriver.findElementByXPath(viewsByXpath);
         viewsButton.click();
 
@@ -77,6 +83,9 @@ public class SampleMobileAutomationTest extends BaseAppiumTest {
         String infiniteByXpath = "//android.widget.TextView[@text='2. Inline']";
         String hourLocatorClassName = "android.widget.RadialTimePickerView$RadialPickerTouchHelper";
 
+        androidDriver.findElementsByAndroidUIAutomator(
+                "new UiScrollable(new UiSelector()).scrollIntoView(text(\"Views\"));");
+
         AndroidElement viewsButton = androidDriver.findElementByXPath(viewsByXpath);
         viewsButton.click();
 
@@ -87,7 +96,6 @@ public class SampleMobileAutomationTest extends BaseAppiumTest {
         inlineButton.click();
 
         List<AndroidElement> clockElements = androidDriver.findElementsByClassName(hourLocatorClassName);
-        System.out.println(clockElements.size());
 
         TouchAction touchAction = new TouchAction(androidDriver);
 
